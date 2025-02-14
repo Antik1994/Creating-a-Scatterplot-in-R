@@ -1,6 +1,6 @@
 # Creating-a-Scatterplot-in-R
 "Create a scatterplot with a linear trendline to visualize the relationship between population density (popdensity) and the proportion of adults in the population. First, compute this proportion using popadults from the midwest dataset. Restrict the analysis to counties in Illinois.
-midwest <- read.xlsx("C:/Users/Antik Debnath/Desktop/Data analytics full UIS/Copy of midwest.xlsx")
+midwest <- read.xlsx("Copy of midwest.xlsx")
 midwest %>% mutate(share_adults=popadults/poptotal) %>%
   filter(state=="IL") %>% ggplot(aes(x=popdensity, y=share_adults)) +
   geom_point()+ geom_smooth(method="lm", se=FALSE)
